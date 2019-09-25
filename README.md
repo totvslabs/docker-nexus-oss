@@ -24,7 +24,7 @@ List the different parameters available to your container
 docker run -p 8081:8081 -v /nexus-data:/nexus-data totvslabs/docker-nexus:[latest|<version>]
 ```
 
-#### Arguments
+#### Environment Variables
 
 * `GITHUB_ORG` - Provides your GitHub Organization name.
 

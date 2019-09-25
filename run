@@ -1,0 +1,10 @@
+#!/bin/bash
+
+find /opt/sonatype ! \( -user nexus -and -group nexus \) -exec chown nexus:nexus {} \;
+find /nexus-data   ! \( -user nexus -and -group nexus \) -exec chown nexus:nexus {} \;
+
+if [[ -n "${GITHUB_ORG}" ]]; then
+  echo "Setting github.org=${GITHUB_ORG} on /opt/sonatype/nexus/etc/githuboauth.properties"
+  echo "github.org=${GITHUB_ORG}" > /opt/sonatype/nexus/etc/githuboauth.properties
+fi
+su-exec nexus /opt/sonatype/nexus/bin/nexus run
