@@ -1,4 +1,4 @@
-FROM quay.io/travelaudience/docker-nexus:3.17.0
+FROM quay.io/travelaudience/docker-nexus:3.19.1
 
 ENV GITHUB_ORG=''
 
