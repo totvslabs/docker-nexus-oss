@@ -1,6 +1,4 @@
-# XXX: https://github.com/travelaudience/docker-nexus/pull/47
-# FROM quay.io/travelaudience/docker-nexus:3.21.2-03
-FROM caarlos0/nexus:3.24.0
+FROM quay.io/travelaudience/docker-nexus:3.26.1
 
 ENV GITHUB_ORG=''
 
